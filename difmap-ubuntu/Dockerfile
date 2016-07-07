@@ -18,7 +18,8 @@ RUN apt-get update && \
     apt-add-repository multiverse && \
     apt-get update && \
     apt-get install -y pgplot5 && \
-    apt-get clean
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # upgrade pip
 RUN pip install --upgrade pip
